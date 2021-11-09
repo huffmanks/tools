@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Create a personalized signature to use on mobile devices and desktops." />
+  <meta property="og:title" content="Email Signature" />
+  <meta property="og:url" content="https://woco-email-signature.netlify.app/" />
+  <meta property="og:description" content="Create a personalized signature to use on mobile devices and desktops." />
+  <link rel="stylesheet" href="style.css" />
+  <title>Email Signature</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Email Signature</h1>
+    <p> Each email is an opportunity to represent you company positively and professionally with a consistent message and design that contribute to improved awareness and branding of the comapany. </p>
+    <p> In less than two minutes, you can create a personalized signature to use on mobile devices and desktops. </p>
+    <p> Please note that installing or updating your signature on one device does not affect your email signatures on other devices. Your signature will need to be added or updated on each device from which you wish to use it. </p>
+    <form id="form">
+      <label>Name</label>
+      <input type="text" id="fullName" class="input" placeholder="John Smith" />
+      <label>Title (Multiple titles on separate lines.)</label>
+      <textarea id="title" class="input" placeholder="Web Developer"></textarea>
+      <label>Email</label>
+      <input type="email" id="email" class="input" placeholder="username@example.com" />
+      <div> *<em>For phone, cell and fax numbers use hypens without parenthesis.</em>
+      </div>
+      <label>Phone</label>
+      <input type="tel" id="phone" class="input" placeholder="123-456-7890" />
+      <label>Cell (Optional)</label>
+      <input type="tel" id="cell" class="input" placeholder="123-456-7890" />
+      <label>Fax (Optional)</label>
+      <input type="tel" id="fax" class="input" placeholder="123-456-7890" />
+      <label>Web</label>
+      <input type="text" id="web" class="input" placeholder="https://example.com" />
+      <label>Company</label>
+      <input type="text" id="company" class="input" placeholder="Example Inc." />
+      <label>Department</label>
+      <input type="text" id="department" class="input" placeholder="Business Office" />
+      <label>Address</label>
+      <input type="text" id="address" class="input" placeholder="123 N. Main St." />
+      <label>City/State/Zip</label>
+      <input type="text" id="cityStateZip" class="input" placeholder="New York, N.Y. 10001" />
+    </form>
+    <div class="copy"></div>
+    <div id="result" class="result">Results are empty. Try filling out an input.</div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

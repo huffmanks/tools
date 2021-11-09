@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Aspect Ratio Calculator</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Aspect Ratio Calculator</a>
+            </div>
+        </nav>
+        <div class="container">
+            <main class="d-flex flex-wrap justify-content-center gap-5 p-2">
+                <form id="calculator" class="calculator p-5 bg-white">
+                    <!-- Original Inputs -->
+                    <div class="border-bottom mb-4">
+                        <h2 class="mb-3"><span class="badge bg-primary">Original</span></h2>
+                        <div class="input-group justify-content-between gap-3 mb-4">
+                            <div class="form-floating">
+                                <input id="original-width" class="form-control" type="text" placeholder="Width" autocomplete="off" />
+                                <label for="original-width">Width</label>
+                            </div>
+                            <div class="form-floating">
+                                <input id="original-height" class="form-control" type="text" placeholder="Height" autocomplete="off" />
+                                <label for="original-height">Height</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Original Inputs -->
+                    <!-- New Inputs -->
+                    <div>
+                        <h2 class="mb-3"><span class="badge bg-primary">New</span></h2>
+                        <div class="input-group justify-content-between align-items-center gap-3 mb-5">
+                            <!-- Radios -->
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="new-value" value="width" checked />
+                                    <label class="form-check-label" for="new-value-width"> Width </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="new-value" value="height" />
+                                    <label class="form-check-label" for="new-value-height"> Height </label>
+                                </div>
+                            </div>
+                            <!-- End Radios -->
+                            <div class="form-floating">
+                                <input id="new-size" class="form-control" type="text" placeholder="Width" autocomplete="off" />
+                                <label for="new-size">Width</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End New Inputs -->
+                    <div class="d-grid">
+                        <button id="clearBtn" type="button" class="btn btn-primary">Clear</button>
+                    </div>
+                </form>
+
+                <!-- Output -->
+                <div class="output p-5">
+                    <h2 class="mb-3"><span class="badge bg-primary">Output</span></h2>
+                    <div class="aspect-box mx-auto">
+                        <div class="aspect-numbers text-center">
+                            <div>New Width:</div>
+                            <div class="new-width mb-3"></div>
+                            <div>New Height:</div>
+                            <div class="new-height mb-3"></div>
+                            <div>Aspect Ratio:</div>
+                            <div>
+                                <span class="aspect-width"></span>
+                                <span>/</span>
+                                <span class="aspect-height"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Output -->
+            </main>
+        </div>
+
+        <!-- Toast -->
+        <div class="toast-backdrop top-0 end-0 position-fixed p-3">
+            <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                <div class="toast-header">
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#dc3545"></rect></svg>
+                    <strong class="me-auto">Error Message</strong>
+                    <button id="closeBtn" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">Only numbers are allowed!</div>
+            </div>
+        </div>
+        <!-- End Toast -->
+        <script src="index.js"></script>
+    </body>
+</html>

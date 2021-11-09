@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    color: #333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+p {
+    margin-bottom: 1.75rem;
+}
+
+a {
+    text-decoration: none;
+    color: #8a6e4b;
+}
+
+form {
+    margin: 2rem 0 1rem;
+    padding: 1rem 0;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px 4px 0 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: #eee;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 0 4px 4px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    padding-left: calc(1.25rem - 10px);
+    border-left: 10px solid #8a6e4b;
+}
+
+textarea {
+    height: 94px;
+}
+
+hr {
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: 3px double #8a6e4b;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+hr:after {
+    content: '&';
+    display: inline-block;
+    position: relative;
+    top: -1.1rem;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    background: #8a6e4b;
+}
+
+.container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.name {
+    color: #8a6e4b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.address {
+    color: #8a6e4b;
+    font-size: 14px;
+}
+
+.copy {
+    margin-bottom: 1.75rem;
+}
+
+.result {
+    display: inline-block;
+    transition: transform 0.4s ease 0.1s, background-color 0.4s ease;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.result:hover {
+    background-color: transparent;
+    transform: scale(0.95);
+}
+
+.invalid {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .result:hover {
+        transform: scale(1);
+        cursor: default;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 3rem 1.15rem 2rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 0.85rem;
+    }
+
+    .result {
+        display: block;
+    }
+}

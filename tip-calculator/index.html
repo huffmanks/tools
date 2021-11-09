@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <header>
+        <div>SPLI</div>
+        <div>TTER</div>
+    </header>
+    <div class="container">
+        <main>
+            <section>
+                <form id="form">
+                    <div class="form-item">
+                        <label for="bill">Bill <span class="error-message">Can't be zero</span></label>
+                        <div class="input-item">
+                            <img src="./images/icon-dollar.svg" alt="dollar icon" />
+                            <input id="bill" type="number" name="bill" placeholder="0" />
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="btn-group-label">Select Tip %</div>
+                        <div class="btn-group">
+                            <input id="tip1" type="radio" name="percent" value="5" />
+                            <label class="btn btn-primary" for="tip1">5%</label>
+                            <input id="tip2" type="radio" name="percent" value="10" />
+                            <label class="btn btn-primary" for="tip2">10%</label>
+                            <input id="tip3" type="radio" name="percent" value="15" />
+                            <label class="btn btn-primary" for="tip3">15%</label>
+                            <input id="tip4" type="radio" name="percent" value="25" />
+                            <label class="btn btn-primary" for="tip4">25%</label>
+                            <input id="tip5" type="radio" name="percent" value="50" />
+                            <label class="btn btn-primary" for="tip5">50%</label>
+                            <input id="custom-tip" class="custom-tip" type="radio" name="percent" autocomplete="off" />
+                            <label class="btn btn-light" for="custom-tip">Custom</label>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="people">Number of People <span class="error-message">Can't be zero</span></label>
+                        <div class="input-item">
+                            <img src="./images/icon-person.svg" alt="people icon" />
+                            <input id="people" type="number" name="people" placeholder="0" />
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <div class="calculator">
+                    <div class="calc-item">
+                        <div>
+                            <div class="title">Tip Amount</div>
+                            <div class="subtitle">/ person</div>
+                        </div>
+                        <div class="dollar">
+                            <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar icon" />
+                            <span id="tip-per" class="dollar-number">0.00</span>
+                        </div>
+                    </div>
+                    <div class="calc-item">
+                        <div>
+                            <div class="title">Total Tip</div>
+                        </div>
+                        <div class="dollar">
+                            <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar icon" />
+                            <span id="tip-total" class="dollar-number">0.00</span>
+                        </div>
+                    </div>
+                    <div class="calc-item">
+                        <div>
+                            <div class="title">Bill Amount</div>
+                            <div class="subtitle">/ person</div>
+                        </div>
+                        <div class="dollar">
+                            <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar icon" />
+                            <span id="bill-per" class="dollar-number">0.00</span>
+                        </div>
+                    </div>
+                    <div class="calc-item">
+                        <div>
+                            <div class="title">Total Bill</div>
+                        </div>
+                        <div class="dollar">
+                            <img class="dollar-icon" src="./images/icon-dollar.svg" alt="dollar icon" />
+                            <span id="bill-total" class="dollar-number">0.00</span>
+                        </div>
+                    </div>
+                    <div class="calc-button">
+                        <button id="reset" class="btn btn-secondary" type="reset">RESET</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
