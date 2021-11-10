@@ -19,7 +19,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding: 1.5rem;
     background-color: #333;
 }
@@ -52,8 +52,20 @@ nav a:hover {
     margin: 0 auto;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .btn-group {
     display: grid;
+    grid-template-columns: repeat(2, 300px);
     justify-content: center;
     gap: 2rem;
 }
@@ -104,5 +116,11 @@ nav a:hover {
     nav ul {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .btn-group {
+        grid-template-columns: 300px;
     }
 }
