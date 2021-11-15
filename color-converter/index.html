@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert different color types." />
+    <meta property="og:title" content="Color Converter" />
+    <meta property="og:url" content="https://huff-tools.netlify.app/color-converter" />
+    <meta property="og:description" content="Convert different color types." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/site/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Color Converter</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/aspect-ratio-calculator">Aspect Ratio Calculator</a>
+            </li>
+            <li>
+                <a href="/case-converter">Case Converter</a>
+            </li>
+            <li><a href="/email-signature">Email Signature</a></li>
+            <li>
+                <a href="/tip-calculator">Tip Calculator</a>
+            </li>
+        </ul>
+        <div class="nav-title"><a href="/color-converter">Color Converter</a></div>
+    </nav>
+    <div class="container">
+        <div class="flex">
+            <form id="color-form">
+                <div class="form-group radio-group">
+                    <div class="radio-label">Pick a color type</div>
+                    <input id="color-hex" type="radio" name="color-type" value="Hex" checked>
+                    <label for="color-hex">Hex</label>
+                    <input id="color-rgb" type="radio" name="color-type" value="RGB">
+                    <label for="color-hex">RGB</label>
+                    <input id="color-hsl" type="radio" name="color-type" value="HSL">
+                    <label for="color-hex">HSL</label>
+                </div>
+                <div class="form-group input-group">
+                    <label for="color-input">Enter <span id="color-type">Hex</span> color</label>
+                    <input id="color-input" type="text" name="color-input">
+                </div>
+            </form>
+            <div id="output" class="output">
+                <div id="output-result" class="output-result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
